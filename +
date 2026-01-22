@@ -1,0 +1,17 @@
+[33mcommit 227c42a8d0a6fe110a7b94fc53995e1f8b674356[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Руслан Муллаянов <vvmrivv@gmail.com>
+Date:   Wed Jan 21 15:36:51 2026 +0500
+
+    внесены все исправления после проверок flake8,mypy,black, isort
+
+[33mcommit af734b2c4805337601e722445e180a98aed613c1[m
+Author: Руслан Муллаянов <vvmrivv@gmail.com>
+Date:   Wed Jan 21 14:43:43 2026 +0500
+
+    добавление модуля widget с функциями mask_account_card и get_date
+
+[33mcommit 13bf4b0c4fae1ec2c68bd13fad948353afe73efb[m
+Author: Руслан Муллаянов <vvmrivv@gmail.com>
+Date:   Wed Jan 21 12:36:03 2026 +0500
+
+    Фиксация прогресса по прошлой домашке
