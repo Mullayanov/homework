@@ -11,6 +11,10 @@
 ```
 https://github.com/Mullayanov/homework.git
 ```
++ Установите зависимости.
+```
+pip install -r requirements.txt
+```
 
 ## Использование:
 

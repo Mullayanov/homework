@@ -11,9 +11,9 @@ def filter_by_state(list_dict_for_filtering: list, value_for_state: str = "EXECU
     return the_filtered_list
 
 
-def sort_by_date(list_dict_for_sorting: list, sorting_order: bool = True) -> list:
+def sort_by_date(list_dict_for_sorting: list, is_sorting_order: bool = True) -> list:
     """
     Функция возвращает список словарей отсортированный по значеню "date".
     Порядок сортировки по умолчанию - убывание.
     """
-    return sorted(list_dict_for_sorting, key=lambda list_dict: list_dict["date"], reverse=sorting_order)
+    return sorted(list_dict_for_sorting, key=lambda list_dict: list_dict["date"], reverse=is_sorting_order)
