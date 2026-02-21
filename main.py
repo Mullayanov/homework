@@ -2,7 +2,6 @@ from src.masks import get_mask_account, get_mask_card_number
 from src.processing import filter_by_state, sort_by_date
 from src.widget import get_date, mask_account_card
 
-# Проверка ДЗ 9.1
 print("\nПроверяем домашнее задание 9.1\n")
 print(get_mask_card_number(7000792289606361))
 print(get_mask_account(73654108430135874305))
@@ -18,6 +17,7 @@ list_arguments = [
     "Visa Platinum 8990922113665229",
     "Visa Gold 5999414228426353",
     "Счет 73654108430135874305",
+    "Maestro 1249275120125"
 ]
 # Цикл подставляет вводные данные в функцию mask_account_card
 for i in list_arguments:
@@ -38,4 +38,4 @@ print(filter_by_state(list_dict, "canceled"))
 # Проверка работы функции sort_by_date.
 # Для сортировки по убыванию, второй аргумент не указываем, либо указываем True.
 # Для сортиировки по возрастанию, второй аргумент указываем False.
-print(sort_by_date(list_dict, False))
+print(sort_by_date(list_dict, True))
