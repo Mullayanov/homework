@@ -1,6 +1,7 @@
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import filter_by_state, sort_by_date
 from src.widget import get_date, mask_account_card
+from src.generators import card_number_generator
 
 print("\nПроверяем домашнее задание 9.1\n")
 print(get_mask_card_number(7000792289606361))
@@ -39,3 +40,5 @@ print(filter_by_state(list_dict, "canceled"))
 # Для сортировки по убыванию, второй аргумент не указываем, либо указываем True.
 # Для сортиировки по возрастанию, второй аргумент указываем False.
 print(sort_by_date(list_dict, True))
+
+print(next(card_number_generator(1, 9999999999999999)))

@@ -1,7 +1,6 @@
 import pytest
 
 from src.processing import filter_by_state, sort_by_date
-from tests.confest import list_dict_for_tests
 
 
 # Используем параметризацию, для теста с разными значениями 'state'
@@ -25,7 +24,10 @@ from tests.confest import list_dict_for_tests
         ("EMPTY", []),
     ],
 )
-def test_filter_by_state(list_dict_for_tests, state_for_test, expected):
+def test_filter_by_state(list_dict_for_tests: list[dict], state_for_test: str, expected: list[dict]) -> None:
+    """
+    Проверяет filter_by_state на правильность фильтрации
+    """
     assert filter_by_state(list_dict_for_tests, value_for_state=state_for_test) == expected
 
 
@@ -56,5 +58,8 @@ def test_filter_by_state(list_dict_for_tests, state_for_test, expected):
         ),
     ],
 )
-def test_sort_by_date(list_dict_for_tests, sorting_order, expected):
+def test_sort_by_date(list_dict_for_tests: list[dict], sorting_order: bool, expected: list[dict]) -> None:
+    """
+    Проверяет функцию sort_by_date на корректность сортировки
+    """
     assert sort_by_date(list_dict_for_tests, is_sorting_order=sorting_order) == expected
