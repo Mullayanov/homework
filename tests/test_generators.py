@@ -64,8 +64,9 @@ from src.generators import card_number_generator, filter_by_currency, transactio
         ("TRY", []),
     ],
 )
-def test_filter_by_currency(for_tests_filter_by_currency: list[dict], currency_code: str, expected: list[dict]) ->\
-        None:
+def test_filter_by_currency(
+    for_tests_filter_by_currency: list[dict], currency_code: str, expected: list[dict]
+) -> None:
     """
     Проводим тест filter_by_currency со списком словарей при помощи фикстуры в модуле confest
     """

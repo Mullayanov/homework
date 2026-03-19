@@ -28,7 +28,7 @@ def parse_date(date_str: str) -> datetime:
     for fmt in formats:
         try:
             return datetime.strptime(date_str, fmt)
-        except (ValueError, TypeError):
+        except ValueError, TypeError:
             continue
         # Если ни один формат не подошёл — считаем минимальной датой, чтобы сортировать в начале
     return datetime.min
