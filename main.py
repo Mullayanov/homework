@@ -1,5 +1,13 @@
+from src.masks import get_mask_account, get_mask_card_number
+from src.processing import filter_by_state, sort_by_date
 from src.widget import get_date, mask_account_card
+from src.generators import card_number_generator
 
+print("\nПроверяем домашнее задание 9.1\n")
+print(get_mask_card_number(7000792289606361))
+print(get_mask_account(73654108430135874305))
+
+print("\nПроверяем домашнее задание 9.2\n")
 # Список вводных данных для проверки ДЗ 9.2
 list_arguments = [
     "Maestro 1596837868705199",
@@ -10,9 +18,27 @@ list_arguments = [
     "Visa Platinum 8990922113665229",
     "Visa Gold 5999414228426353",
     "Счет 73654108430135874305",
+    "Maestro 1249275120125"
 ]
 # Цикл подставляет вводные данные в функцию mask_account_card
 for i in list_arguments:
     print(mask_account_card(i))
 # Проверка работы функции get_date
 print(get_date("2024-03-11T02:26:18.671407"))
+
+print("\nПроверяем домашнее задание 10.1\n")
+# Список вводных данных для проверки ДЗ 10.1
+list_dict = [
+    {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+    {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+    {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+    {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
+]
+# Проверка работы функции filter_by_state
+print(filter_by_state(list_dict, "canceled"))
+# Проверка работы функции sort_by_date.
+# Для сортировки по убыванию, второй аргумент не указываем, либо указываем True.
+# Для сортиировки по возрастанию, второй аргумент указываем False.
+print(sort_by_date(list_dict, True))
+
+print(next(card_number_generator(1, 9999999999999999)))
